@@ -1,8 +1,0 @@
-.cabecera {
-  /* Define los estilos para el elemento con la clase 'cabecera' */
-  background-image: url("/static/img/cabecera.webp"); /* Establece la imagen de fondo usando la ruta especificada */
-  background-size: cover; /* Asegura que la imagen de fondo cubra todo el área del elemento, recortándose si es necesario */
-  background-position: center; /* Centra la imagen de fondo horizontal y verticalmente */
-  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita (se muestre varias veces) */
-  min-height: 250px; /* Establece una altura mínima para el elemento, asegurando que sea visible y la imagen de fondo se muestre */
-}

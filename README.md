@@ -3,6 +3,10 @@
 Everything done so far in the project under the `v2` branch can be found in the following articles:
 
 - [Designing a base template in Django](https://programacionfacil.org/blog/disenando-una-plantilla-base-en-django/)
+- [Creating a custom CSS file in Django](https://programacionfacil.org/blog/crear-un-archivo-css-personalizado-en-django/)
+- [Template reuse with Django](https://programacionfacil.org/blog/reutilizacion-de-plantillas-con-django/)
+- [Adding global vhanges to Django pages](https://programacionfacil.org/blog/anadir-cambios-globales-a-las-paginas-de-django/)
+- [Create Dark/Light Mode with Django and Bootstrap 5.3+](https://programacionfacil.org/blog/crear-modo-oscuro-claro-con-django-y-bootstrap-5-3/)
 
 ⚠️ Security Warning: Your Django SECRET_KEY
 If you intend to adapt or use components from the project, it is imperative that you create your own fresh Django project using django-admin startproject.
@@ -16,6 +20,10 @@ If you intend to adapt or use components from the project, it is imperative that
 Todo lo realizado hasta ahora en el proyecto bajo la rama `v2` se encuentra en los siguientes artículos:
 
 - [Diseñando una plantilla base en Django](https://programacionfacil.org/blog/disenando-una-plantilla-base-en-django/)
+- [Crear un archivo CSS personalizado en Django](https://programacionfacil.org/blog/crear-un-archivo-css-personalizado-en-django/)
+- [Reutilización de plantillas con Django](https://programacionfacil.org/blog/reutilizacion-de-plantillas-con-django/)
+- [Añadir cambios globales a las páginas de Django](https://programacionfacil.org/blog/anadir-cambios-globales-a-las-paginas-de-django/)
+- [Crear modo oscuro/claro con Django y Bootstrap 5.3+](https://programacionfacil.org/blog/crear-modo-oscuro-claro-con-django-y-bootstrap-5-3/)
 
 ⚠️ Advertencia de Seguridad: Tu SECRET_KEY de Django
 Si tienes la intención de adaptar o utilizar componentes del proyecto, es imprescindible que crees tu propio proyecto Django nuevo utilizando django-admin startproject.
