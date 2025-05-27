@@ -1,0 +1,30 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<div class="p-3">
+  <div class="container">
+    <div class="row mt-3 align-items-center">
+      <!-- Logo a la izquierda -->
+      <div class="col-md-4 mb-3 text-center">
+        <img src="{% static 'img/logo.png' %}" class="img-fluid rounded" alt="Logo del juego" />
+      </div>
+
+      <!-- Información del juego a la derecha -->
+      <div class="col-md-8 mb-3">
+        <h2>{{ datos_plantilla.juego.nombre }}</h2>
+        <hr />
+        <p>
+          <strong>Descripción:</strong> {{ datos_plantilla.juego.descripcion }}
+        </p>
+        <p><strong>Precio:</strong> ${{ datos_plantilla.juego.precio }}</p>
+        <p><strong>Género:</strong> {{ datos_plantilla.juego.genero }}</p>
+        <p>
+          <strong>Plataformas:</strong>
+
+          {% for plataforma in datos_plantilla.juego.plataformas %}
+          <span>{{ plataforma }}</span>{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

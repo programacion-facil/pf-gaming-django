@@ -1,0 +1,20 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<div class="row">
+  {% for juego in datos_plantilla.juegos %}
+  <div class="col-md-4 col-lg-3 mb-2 d-flex">
+    <div class="card flex-fill d-flex flex-column p-2 align-items-center pt-4">
+      <img src="{% static 'img/logo.png' %}" class="card-img-top rounded" />
+      <div class="card-body text-center mt-auto">
+        <a
+          href="{% url 'juegos.mostrar' id=juego.id %}"
+          class="btn bg-dark text-white"
+        >
+          {{ juego.nombre }}
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}
