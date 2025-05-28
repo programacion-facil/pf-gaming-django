@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 juegos = [
     {
@@ -85,15 +86,30 @@ juegos = [
 
 def index(request):
     datos_plantilla = {
-        'titulo': 'juegos',
+        'titulo': 'Catálogo de videojuegos',
         'juegos': juegos
     }
-    return render(request, 'juegos/index.html', {'datos_plantilla': datos_plantilla})
+    plantilla_principal = {
+        'title': 'Catálogo de videojuegos'
+    }
+    return render(request, 'juegos/index.html', {
+        'datos_plantilla': datos_plantilla,
+        'plantilla_principal': plantilla_principal
+    })
 
 def mostrar(request, id):
     juego = next((j for j in juegos if j['id'] == id), None)
     if not juego:
-        return render(request, '404.html', status=404)
+        return HttpResponse("<h1>Juego no encontrado</h1><p>El juego solicitado no existe.</p>")
+    
+    datos_plantilla = {
+        'juego': juego,
+        'titulo': juego['nombre']
+    }
+    plantilla_principal = {
+        'title': juego['nombre']
+    }
     return render(request, 'juegos/mostrar.html', {
-        'datos_plantilla': {'juego': juego}
+        'datos_plantilla': datos_plantilla,
+        'plantilla_principal': plantilla_principal
     })
