@@ -25,11 +25,19 @@
         <small class="text-muted">Impuestos incluidos</small>
       </div>
 
+      <!-- Géneros -->
+      <p><strong>Género:</strong></p>
+      <div class="mb-3">
+        {% for genero in datos_plantilla.juego.generos.all %}
+        <span class="badge bg-primary me-1">{{ genero.nombre }}</span>
+        {% endfor %}
+      </div>
+
       <!-- Plataformas -->
       <p><strong>Disponible en:</strong></p>
       <div class="mb-4">
-        {% for plataforma in datos_plantilla.juego.plataformas %}
-        <span class="badge bg-dark me-1">{{ plataforma }}</span>
+        {% for plataforma in datos_plantilla.juego.plataformas.all %}
+        <span class="badge bg-dark me-1">{{ plataforma.nombre }}</span>
         {% endfor %}
       </div>
 
