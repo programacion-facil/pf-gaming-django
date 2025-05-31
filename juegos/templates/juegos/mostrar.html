@@ -7,8 +7,8 @@
 
     <!-- Imagen del juego -->
     <div class="col-md-5 text-center">
-      <img src="{% static 'img/logo.png' %}" class="img-fluid rounded shadow-sm" alt="Imagen del juego"
-        style="max-height: 350px;" />
+      <img src="{% static 'img/portadas/' %}{{ datos_plantilla.juego.id }}.webp" class="img-fluid rounded shadow-sm"
+        alt="Imagen del juego {{ datos_plantilla.juego.nombre }}" />
     </div>
 
     <!-- Detalles del juego -->
