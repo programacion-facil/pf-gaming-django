@@ -43,11 +43,17 @@
 
       <!-- Botones de acción -->
       <div class="d-flex flex-column flex-sm-row gap-2">
-        <button class="btn btn-success btn-lg">Comprar ahora</button>
-        <button class="btn btn-outline-secondary btn-lg">Agregar a favoritos</button>
+        <button class="btn btn-success btn-md d-flex align-items-center">
+          <i class="fas fa-shopping-cart me-2"></i>Comprar ahora
+        </button>
+        <button class="btn btn-outline-danger btn-md d-flex align-items-center">
+          <i class="fas fa-heart me-2"></i>Agregar a favoritos
+        </button>
+        <a href="{% url 'juegos.index' %}" class="btn btn-outline-primary btn-md d-flex align-items-center">
+          <i class="fas fa-arrow-left me-2"></i>Volver al catálogo
+        </a>
       </div>
-    </div>
 
+    </div>
   </div>
-</div>
-{% endblock content %}
+  {% endblock content %}
