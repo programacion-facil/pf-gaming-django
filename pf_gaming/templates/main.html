@@ -43,9 +43,21 @@
               class="img-fluid logo-img" />
           </a>
         </div>
-        <div class="col-md-8 text-center text-md-start">
+        <div class="col-md-4 text-center text-md-start">
           <h1 class="display-5 fw-bold mb-1">PF Gaming</h1>
-          <p class="lead mb-0">Tu universo gamer en un solo lugar</p>
+          <p class="lead mb-3">Tu universo gamer en un solo lugar</p>
+
+          <!-- Formulario de búsqueda -->
+          <form method="GET" action="{% url 'juegos.index' %}"
+            class="search-form d-flex align-items-center my-3 p-2 search-form-margin" role="search"
+            aria-label="Buscar videojuegos">
+            <input class="form-control form-control-sm search-input" type="search" name="q" placeholder="Buscar..."
+              aria-label="Buscar videojuegos" value="{{ request.GET.q|default:'' }}">
+            <button class="btn btn-outline-primary btn-sm search-button" type="submit" title="Buscar">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+
         </div>
       </div>
     </div>
