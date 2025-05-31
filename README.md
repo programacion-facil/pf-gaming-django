@@ -7,6 +7,7 @@ Everything done so far in the project under the `v3` branch can be found in the 
 - [Creating our first model in Django for the video game app](https://programacionfacil.org/blog/creando-nuestro-primer-modelo-en-django-para-la-app-de-videojuegos/)
 - [Django Administration: Superusers, Models, and the Admin Panel](https://programacionfacil.org/blog/administracion-en-django-superusuarios-modelos-y-panel-admin/)
 - [Improving the User Interface in a Django Project](https://programacionfacil.org/blog/mejorando-la-interfaz-de-usuario-en-un-proyecto-django/)
+- [How to Implement an Advanced Search Engine in Django](https://programacionfacil.org/blog/como-implementar-un-buscador-avanzado-en-django/)
 
 ⚠️ Security Warning: Your Django SECRET_KEY
 If you intend to adapt or use components from the project, it is imperative that you create your own fresh Django project using django-admin startproject.
@@ -24,6 +25,7 @@ Todo lo realizado hasta ahora en el proyecto bajo la rama `v3` se encuentra en l
 - [Creando nuestro primer modelo en Django para la app de videojuegos](https://programacionfacil.org/blog/creando-nuestro-primer-modelo-en-django-para-la-app-de-videojuegos/)
 - [Administración en Django: superusuarios, modelos y panel admin](https://programacionfacil.org/blog/administracion-en-django-superusuarios-modelos-y-panel-admin/)
 - [Mejorando la interfaz de usuario en un proyecto Django](https://programacionfacil.org/blog/mejorando-la-interfaz-de-usuario-en-un-proyecto-django/)
+- [Cómo implementar un buscador avanzado en Django](https://programacionfacil.org/blog/como-implementar-un-buscador-avanzado-en-django/)
 
 ⚠️ Advertencia de Seguridad: Tu SECRET_KEY de Django
 Si tienes la intención de adaptar o utilizar componentes del proyecto, es imprescindible que crees tu propio proyecto Django nuevo utilizando django-admin startproject.
