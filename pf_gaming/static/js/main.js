@@ -23,13 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Actualizar el texto y estilo del botón
   function updateButton(theme) {
     if (theme === "dark") {
-      toggleBtn.innerHTML = '<i class="fas fa-moon me-2"></i>Modo Oscuro';
-      toggleBtn.classList.remove("btn-outline-dark");
-      toggleBtn.classList.add("btn-outline-light");
+      toggleBtn.innerHTML = '🌙';
     } else {
-      toggleBtn.innerHTML = '<i class="fas fa-sun me-2"></i>Modo Claro';
-      toggleBtn.classList.remove("btn-outline-light");
-      toggleBtn.classList.add("btn-outline-dark");
+      toggleBtn.innerHTML = '☀️';
     }
   }
+
+  // Mostrar los mensajes Toast con autohide y delay de 7 segundos
+  const toastElList = [].slice.call(document.querySelectorAll('.toast'));
+  toastElList.forEach(toastEl => {
+    const toast = new bootstrap.Toast(toastEl, {
+      autohide: true,
+      delay: 7000
+    });
+    toast.show();
+  });
 });

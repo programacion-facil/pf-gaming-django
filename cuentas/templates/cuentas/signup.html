@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="col-md-6">
+        <h2 class="text-center mb-4">Registro de usuario</h2>
+        <form method="post" novalidate>
+            {% csrf_token %}
+
+            <!-- Campo de nombre de usuario -->
+            <div class="mb-3">
+                <label for="id_username" class="form-label">Nombre de usuario</label>
+                <input type="text" name="username"
+                    class="form-control {% if form.username.errors %}is-invalid{% endif %}" id="id_username"
+                    value="{{ form.username.value|default_if_none:'' }}">
+                {% if form.username.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.username.errors %}
+                    {{ error }}
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="form-text">Introduce tu nombre de usuario.</div>
+                {% endif %}
+            </div>
+
+            <!-- Campo de correo electrónico (personalizado en la plantilla) -->
+            <div class="mb-3">
+                <label for="id_email" class="form-label">Correo electrónico</label>
+                <input type="email" name="email" class="form-control {% if form.email.errors %}is-invalid{% endif %}"
+                    id="id_email" value="{{ form.email.value|default_if_none:'' }}">
+                {% if form.email.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    {{ error }}
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="form-text">Introduce un correo electrónico válido.</div>
+                {% endif %}
+            </div>
+
+            <!-- Campo de contraseña -->
+            <div class="mb-3">
+                <label for="id_password1" class="form-label">Contraseña</label>
+                <input type="password" name="password1"
+                    class="form-control {% if form.password1.errors %}is-invalid{% endif %}" id="id_password1">
+                {% if form.password1.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.password1.errors %}
+                    {{ error }}
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="form-text">Crea una contraseña segura.</div>
+                {% endif %}
+            </div>
+
+            <!-- Campo de confirmación de contraseña -->
+            <div class="mb-3">
+                <label for="id_password2" class="form-label">Confirmar contraseña</label>
+                <input type="password" name="password2"
+                    class="form-control {% if form.password2.errors %}is-invalid{% endif %}" id="id_password2">
+                {% if form.password2.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.password2.errors %}
+                    {{ error }}
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="form-text">Repite la contraseña.</div>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
