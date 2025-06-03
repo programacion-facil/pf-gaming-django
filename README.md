@@ -1,13 +1,10 @@
 ## English
 
-Everything done so far in the project under the `v3` branch can be found in the following articles:
+Everything done so far in the project under the `v4` branch can be found in the following articles:
 
-- [Create a catalog app in a Django project](https://programacionfacil.org/blog/crear-una-app-de-catalogo-en-un-proyecto-django/)
-- [Restyling Django app interfaces](https://programacionfacil.org/blog/remodelando-estilos-en-apps-django/)
-- [Creating our first model in Django for the video game app](https://programacionfacil.org/blog/creando-nuestro-primer-modelo-en-django-para-la-app-de-videojuegos/)
-- [Django Administration: Superusers, Models, and the Admin Panel](https://programacionfacil.org/blog/administracion-en-django-superusuarios-modelos-y-panel-admin/)
-- [Improving the User Interface in a Django Project](https://programacionfacil.org/blog/mejorando-la-interfaz-de-usuario-en-un-proyecto-django/)
-- [How to Implement an Advanced Search Engine in Django](https://programacionfacil.org/blog/como-implementar-un-buscador-avanzado-en-django/)
+- [Migrate a Django project from SQLite to MySQL using sqlite3-to-mysql](https://programacionfacil.org/blog/migrar-un-proyecto-django-de-sqlite-a-mysql-usando-sqlite3-to-mysql/)
+- [How to Implement Registration, Login, and Logout in Django](https://programacionfacil.org/blog/como-implementar-registro-login-y-logout-en-django/)
+
 
 ⚠️ Security Warning: Your Django SECRET_KEY
 If you intend to adapt or use components from the project, it is imperative that you create your own fresh Django project using django-admin startproject.
@@ -18,14 +15,10 @@ If you intend to adapt or use components from the project, it is imperative that
 
 ## Español
 
-Todo lo realizado hasta ahora en el proyecto bajo la rama `v3` se encuentra en los siguientes artículos:
+Todo lo realizado hasta ahora en el proyecto bajo la rama `v4` se encuentra en los siguientes artículos:
 
-- [Crear una app de catálogo en un proyecto Django](https://programacionfacil.org/blog/crear-una-app-de-catalogo-en-un-proyecto-django/)
-- [Remodelando estilos en apps Django](https://programacionfacil.org/blog/remodelando-estilos-en-apps-django/)
-- [Creando nuestro primer modelo en Django para la app de videojuegos](https://programacionfacil.org/blog/creando-nuestro-primer-modelo-en-django-para-la-app-de-videojuegos/)
-- [Administración en Django: superusuarios, modelos y panel admin](https://programacionfacil.org/blog/administracion-en-django-superusuarios-modelos-y-panel-admin/)
-- [Mejorando la interfaz de usuario en un proyecto Django](https://programacionfacil.org/blog/mejorando-la-interfaz-de-usuario-en-un-proyecto-django/)
-- [Cómo implementar un buscador avanzado en Django](https://programacionfacil.org/blog/como-implementar-un-buscador-avanzado-en-django/)
+- [Migrar un proyecto Django de SQLite a MySQL usando sqlite3-to-mysql](https://programacionfacil.org/blog/migrar-un-proyecto-django-de-sqlite-a-mysql-usando-sqlite3-to-mysql/)
+- [Cómo implementar registro, login y logout en Django](https://programacionfacil.org/blog/como-implementar-registro-login-y-logout-en-django/)
 
 ⚠️ Advertencia de Seguridad: Tu SECRET_KEY de Django
 Si tienes la intención de adaptar o utilizar componentes del proyecto, es imprescindible que crees tu propio proyecto Django nuevo utilizando django-admin startproject.
