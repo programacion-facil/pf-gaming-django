@@ -3,6 +3,7 @@
 Everything done so far in the project under the `v4` branch can be found in the following articles:
 
 - [Migrate a Django project from SQLite to MySQL using sqlite3-to-mysql](https://programacionfacil.org/blog/migrar-un-proyecto-django-de-sqlite-a-mysql-usando-sqlite3-to-mysql/)
+- [How to Implement Registration, Login, and Logout in Django](https://programacionfacil.org/blog/como-implementar-registro-login-y-logout-en-django/)
 
 
 ⚠️ Security Warning: Your Django SECRET_KEY
@@ -17,7 +18,7 @@ If you intend to adapt or use components from the project, it is imperative that
 Todo lo realizado hasta ahora en el proyecto bajo la rama `v4` se encuentra en los siguientes artículos:
 
 - [Migrar un proyecto Django de SQLite a MySQL usando sqlite3-to-mysql](https://programacionfacil.org/blog/migrar-un-proyecto-django-de-sqlite-a-mysql-usando-sqlite3-to-mysql/)
-
+- [Cómo implementar registro, login y logout en Django](https://programacionfacil.org/blog/como-implementar-registro-login-y-logout-en-django/)
 
 ⚠️ Advertencia de Seguridad: Tu SECRET_KEY de Django
 Si tienes la intención de adaptar o utilizar componentes del proyecto, es imprescindible que crees tu propio proyecto Django nuevo utilizando django-admin startproject.
