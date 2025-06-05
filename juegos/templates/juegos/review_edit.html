@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <h2>Editar reseña para "{{ juego.nombre }}"</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Texto</label>
+            <textarea name="texto" class="form-control" rows="4" required>{{ resena.texto }}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label d-block">Calificación</label>
+            <div class="star-rating">
+                {% for i in "54321"|make_list %}
+                <input type="radio" id="estrella{{ i }}" name="calificacion" value="{{ i }}"
+                    {% if resena.calificacion|stringformat:"s" == i %}checked{% endif %}>
+                <label for="estrella{{ i }}"><i class="fas fa-star"></i></label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <a href="{% url 'juegos.mostrar' id=juego.id %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

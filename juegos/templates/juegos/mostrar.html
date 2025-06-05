@@ -54,6 +54,96 @@
         </a>
       </div>
 
+      <hr class="my-4">
+      <h3>Reseñas</h3>
+      <div class="mb-3">
+        <strong>Puntuación global:</strong>
+        <div style="position: relative; display: inline-block; font-size: 1.5rem; color: #ffc107;">
+          {% for i in datos_plantilla.estrellas %}
+          {% if i <= datos_plantilla.promedio_calificacion %}
+          <i class="fas fa-star" style="color: #ffc107;"></i> <!-- amarillo -->
+          {% else %}
+          <i class="far fa-star"></i>
+          {% endif %}
+          {% endfor %}
+
+          {% if datos_plantilla.total_resenas > 0 %}
+          <small class="ms-2 text-muted">
+            ({{ datos_plantilla.total_resenas }} reseña/s)
+
+          </small>
+          {% else %}
+          <small class="ms-2 text-muted">Aún no hay puntuaciones.</small>
+          {% endif %}
+        </div>
+
+      </div>
+
+      <!-- Lista de reseñas -->
+      <div class="mb-4">
+        {% for resena in datos_plantilla.juego.resenas.all %}
+        <div class="border rounded p-3 mb-3">
+          <strong>{{ resena.usuario.username }}</strong>
+          <span class="text-warning">
+            {% for i in datos_plantilla.estrellas %}
+            {% if i <= resena.calificacion %}
+            <i class="fas fa-star"></i> {# estrella llena #}
+            {% else %}
+            <i class="far fa-star"></i> {# estrella vacía #}
+            {% endif %}
+            {% endfor %}
+          </span>
+
+          <p class="mb-1">{{ resena.texto }}</p>
+          <small class="text-muted">{{ resena.creado_en|date:"d M Y H:i" }}</small>
+
+          {% if resena.usuario == user %}
+          <div class="mt-2">
+            <a href="{% url 'resenas.editar' juego_id=datos_plantilla.juego.id resena_id=resena.id %}"
+              class="btn btn-sm btn-outline-primary">Editar</a>
+            <a href="{% url 'resenas.eliminar' juego_id=datos_plantilla.juego.id resena_id=resena.id %}"
+              class="btn btn-sm btn-outline-danger">Eliminar</a>
+          </div>
+          {% endif %}
+        </div>
+        {% empty %}
+        <p>No hay reseñas todavía.</p>
+        {% endfor %}
+      </div>
+      {% if user.is_authenticated %}
+      {% if not datos_plantilla.resena_usuario %}
+      <form method="post" action="{% url 'resenas.crear' juego_id=datos_plantilla.juego.id %}" class="mb-5">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label class="form-label">Tu reseña</label>
+          <textarea class="form-control" name="texto" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label d-block">Calificación</label>
+          <div class="star-rating">
+            {% for i in "54321"|make_list %}
+            <input type="radio" id="estrella{{ i }}" name="calificacion" value="{{ i }}"
+              {% if resena.calificacion|stringformat:"s" == i %}checked{% endif %}>
+            <label for="estrella{{ i }}"><i class="fas fa-star"></i></label>
+            {% endfor %}
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Publicar reseña</button>
+      </form>
+      {% else %}
+      <div class="alert alert-info">
+        Ya has escrito una reseña. Puedes <a
+          href="{% url 'resenas.editar' juego_id=datos_plantilla.juego.id resena_id=datos_plantilla.resena_usuario.id %}">editarla</a>
+        o <a
+          href="{% url 'resenas.eliminar' juego_id=datos_plantilla.juego.id resena_id=datos_plantilla.resena_usuario.id %}">eliminarla</a>
+        para escribir una nueva.
+      </div>
+      {% endif %}
+      {% else %}
+      <p><a href="{% url 'login' %}">Inicia sesión</a> para escribir una reseña.</p>
+      {% endif %}
+
     </div>
   </div>
   {% endblock content %}

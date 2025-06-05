@@ -4,7 +4,8 @@ Everything done so far in the project under the `v4` branch can be found in the 
 
 - [Migrate a Django project from SQLite to MySQL using sqlite3-to-mysql](https://programacionfacil.org/blog/migrar-un-proyecto-django-de-sqlite-a-mysql-usando-sqlite3-to-mysql/)
 - [How to Implement Registration, Login, and Logout in Django](https://programacionfacil.org/blog/como-implementar-registro-login-y-logout-en-django/)
-
+- [Adding a user review system in Django](https://programacionfacil.org/blog/anadiendo-un-sistema-de-resenas-de-usuario-en-django/)
+- [How to highlight the active link in a navigation menu with Django + Bootstrap](https://programacionfacil.org/blog/como-resaltar-el-enlace-activo-en-un-menu-de-navegacion-con-django-bootstrap/)
 
 ⚠️ Security Warning: Your Django SECRET_KEY
 If you intend to adapt or use components from the project, it is imperative that you create your own fresh Django project using django-admin startproject.
@@ -19,6 +20,8 @@ Todo lo realizado hasta ahora en el proyecto bajo la rama `v4` se encuentra en l
 
 - [Migrar un proyecto Django de SQLite a MySQL usando sqlite3-to-mysql](https://programacionfacil.org/blog/migrar-un-proyecto-django-de-sqlite-a-mysql-usando-sqlite3-to-mysql/)
 - [Cómo implementar registro, login y logout en Django](https://programacionfacil.org/blog/como-implementar-registro-login-y-logout-en-django/)
+- [Añadiendo un sistema de reseñas de usuario en Django](https://programacionfacil.org/blog/anadiendo-un-sistema-de-resenas-de-usuario-en-django/)
+- [Cómo resaltar el enlace activo en un menú de navegación con Django + Bootstrap](https://programacionfacil.org/blog/como-resaltar-el-enlace-activo-en-un-menu-de-navegacion-con-django-bootstrap/)
 
 ⚠️ Advertencia de Seguridad: Tu SECRET_KEY de Django
 Si tienes la intención de adaptar o utilizar componentes del proyecto, es imprescindible que crees tu propio proyecto Django nuevo utilizando django-admin startproject.
