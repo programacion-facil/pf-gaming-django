@@ -8,10 +8,12 @@ def index(request):
         'Novedades': Juego.objects.filter(id__in=[4, 9, 10]),
     }
 
-    return render(request, 'home/index.html', {
-        'categorias': juegos_por_categoria
-    })
+    plantilla_principal = {'title': 'PF Gaming'}
 
+    return render(request, 'home/index.html', {
+        'categorias': juegos_por_categoria,
+        'plantilla_principal': plantilla_principal
+    })
 
 def faq(request):
     plantilla_principal = {'title': 'Preguntas frecuentes'}

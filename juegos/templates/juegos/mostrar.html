@@ -43,9 +43,10 @@
 
       <!-- Botones de acción -->
       <div class="d-flex flex-column flex-sm-row gap-2">
-        <button class="btn btn-success btn-md d-flex align-items-center">
-          <i class="fas fa-shopping-cart me-2"></i>Comprar ahora
-        </button>
+        <a href="{% url 'carrito:agregar' juego_id=datos_plantilla.juego.id %}"
+          class="btn btn-success btn-md d-flex align-items-center">
+          <i class="fas fa-shopping-cart me-2"></i>Agregar al carrito
+        </a>
         <button class="btn btn-outline-danger btn-md d-flex align-items-center">
           <i class="fas fa-heart me-2"></i>Agregar a favoritos
         </button>
@@ -53,6 +54,7 @@
           <i class="fas fa-arrow-left me-2"></i>Volver al catálogo
         </a>
       </div>
+
 
       <hr class="my-4">
       <h3>Reseñas</h3>

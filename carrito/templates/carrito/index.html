@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<h2>{{ datos_plantilla.titulo }}</h2>
+
+{% if datos_plantilla.juegos %}
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Juego</th>
+                <th>Precio unitario</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for juego in datos_plantilla.juegos %}
+            <tr>
+                <td>
+                    <img src="{% static 'img/portadas/' %}{{ juego.id }}.webp" alt="{{ juego.nombre }}"
+                        style="height: 1.2em; width: auto; vertical-align: middle; margin-right: 0.3em;">
+                </td>
+                <td>{{ juego.nombre }}</td>
+                <td>{{ juego.precio }} €</td>
+                <td>{{ juego.cantidad }}</td>
+                <td>{{ juego.subtotal }} €</td>
+                <td>
+                    <a href="{% url 'carrito:eliminar' juego.id %}" class="btn btn-sm btn-outline-danger">
+                        <i class="fas fa-times"></i> Quitar
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr class="table-body">
+                <td colspan="5" class="text-end"><strong>Total:</strong></td>
+                <td><strong>{{ datos_plantilla.total|floatformat:2 }} €</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<a href="{% url 'carrito:limpiar' %}" class="btn btn-danger me-2">
+    <i class="fas fa-trash-alt"></i> Vaciar carrito
+</a>
+<a href="#" class="btn btn-success">
+    <i class="fas fa-credit-card"></i> Realizar pedido
+</a>
+{% else %}
+<p>El carrito está vacío.</p>
+{% endif %}
+{% endblock %}
