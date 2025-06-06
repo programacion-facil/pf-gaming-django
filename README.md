@@ -88,7 +88,6 @@ If you intend to adapt or use components from the project, it is imperative that
 Todo lo realizado hasta ahora en el proyecto bajo la rama `v1` se encuentra en los siguientes artículos:
 
 - [Cómo instalar Django en entornos virtuales](https://programacionfacil.org/blog/instalar-django-en-entornos-virtuales/)
-- [Cómo instalar Django en entornos virtuales](https://programacionfacil.org/blog/instalar-django-en-entornos-virtuales/)
 - [Aprende Django con un proyecto real: Tienda de videojuegos](https://programacionfacil.org/blog/aprende-django-con-un-proyecto-real-tienda-de-videojuegos/)
 - [Estructura de proyecto y creación de nuestra primera app en Django](https://programacionfacil.org/blog/estructura-de-proyecto-y-creacion-de-nuestra-primera-app-en-django/)
 
