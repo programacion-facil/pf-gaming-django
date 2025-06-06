@@ -1,5 +1,13 @@
 ## English
 
+ℹ️ Heads Up!
+Although the articles are in Spanish, you can easily translate them to English using your browser's built-in translation feature.
+
+# GETTING STARTED
+
+- [Install Django in Virtual Environments](https://programacionfacil.org/blog/instalar-django-en-entornos-virtuales/)
+- [Create Your First Web Application with Django](https://programacionfacil.org/blog/crea-tu-primera-aplicacion-web-con-django/)
+
 # V1 BRANCH
 
 Everything done so far in the project under the `v1` branch can be found in the following articles:
@@ -82,6 +90,11 @@ If you intend to adapt or use components from the project, it is imperative that
 ---
 
 ## Español
+
+# INICIO
+
+- [Instalar Django en entornos virtuales](https://programacionfacil.org/blog/instalar-django-en-entornos-virtuales/)
+- [Crea tu primera aplicación web con Django](https://programacionfacil.org/blog/crea-tu-primera-aplicacion-web-con-django/)
 
 # RAMA V1
 
